@@ -10,23 +10,25 @@ public class Program {
 	}
 
 	//생성자주입 constructor injection
+	public int addP(int num1, int num2) {
+		int result ;
+		result = calculator.add(num1,num2);
+		return result;
+	}
 	
 
 	//섹터 주입 setter injection
-	public Program(Calculator clCalculator) {
-		super();
-		this.calculator = clCalculator;
-	}
+	
 	public void setCalculator(Calculator calculator) {
 		this.calculator = calculator;
 	}
 
 
 	
-	public int addP(int num1, int num2) {
-		int result ;
-		result = calculator.add(num1,num2);
-		return result;
+	public Program(Calculator calculator) {
+		super();
+		this.calculator = calculator;
 	}
+
 	
 }
