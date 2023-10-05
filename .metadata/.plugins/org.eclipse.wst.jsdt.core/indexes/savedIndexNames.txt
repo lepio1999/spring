@@ -1,0 +1,11 @@
+INDEX VERSION 1.4+C:\Users\hbi1\Documents\javafullstack\sp_ws\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4142261827.index
+1667365077.index
+1066907446.index
+1937528655.index
+2121864316.index
+2399745085.index
+843690767.index
+2007568613.index
+881619258.index
+1773393425.index

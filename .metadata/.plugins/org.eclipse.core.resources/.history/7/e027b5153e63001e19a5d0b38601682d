@@ -1,0 +1,25 @@
+package com.acorn.day1.di;
+
+public class Program {
+
+	Calculator calculator;
+
+	public void setClCalculator(Calculator clCalculator) {
+		this.calculator = clCalculator;
+	}
+
+	public Program(Calculator clCalculator) {
+		super();
+		this.calculator = clCalculator;
+	}
+	public Program() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public int add(int num1, int num2) {
+		int result;
+		result = calculator.add(num1,num2);
+		return result;
+	}
+	
+}

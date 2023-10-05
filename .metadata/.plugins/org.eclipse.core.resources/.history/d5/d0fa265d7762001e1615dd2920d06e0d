@@ -1,0 +1,15 @@
+package com.acorn.web;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
+@Controller
+public class Ex01 {
+
+	
+	public String ex1(Model model) {
+		model.addAttribute("message1", "화이팅");
+		return "ex1";
+		
+	}
+}

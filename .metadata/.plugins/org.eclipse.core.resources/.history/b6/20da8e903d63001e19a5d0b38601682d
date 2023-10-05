@@ -1,0 +1,17 @@
+package com.acorn.day1.di;
+
+public class Program {
+
+	Calculator clCalculator;
+
+	public void setClCalculator(Calculator clCalculator) {
+		this.clCalculator = clCalculator;
+	}
+
+	public Program(Calculator clCalculator) {
+		super();
+		this.clCalculator = clCalculator;
+	}
+	
+	
+}
