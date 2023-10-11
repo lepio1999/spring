@@ -182,3 +182,7 @@
 127.0.0.1 - - [05/Oct/2023:16:23:28 +0900] "GET / HTTP/1.1" 404 807
 0:0:0:0:0:0:0:1 - - [05/Oct/2023:16:23:29 +0900] "GET /day1/WEB-INF/classes/com/acorn/day1/di/PController3.java HTTP/1.1" 404 721
 0:0:0:0:0:0:0:1 - - [05/Oct/2023:16:23:36 +0900] "GET /day1/list HTTP/1.1" 200 148
+127.0.0.1 - - [05/Oct/2023:16:28:00 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [05/Oct/2023:16:28:01 +0900] "GET /day1/WEB-INF/classes/com/acorn/day1/di/PController3.java HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [05/Oct/2023:16:28:21 +0900] "GET /day1/list HTTP/1.1" 200 177
+0:0:0:0:0:0:0:1 - - [05/Oct/2023:16:28:42 +0900] "GET /day1/list HTTP/1.1" 200 176
