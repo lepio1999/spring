@@ -3,6 +3,12 @@ C:\Users\hbi1\Documents\javafullstack\sp_ws\.metadata\.plugins\org.eclipse.jst.j
 \day5Cookie\src\main\java
 C:\Users\hbi1\Documents\javafullstack\sp_ws\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2808595563.index
 \day5Exception\src\main\java
+C:\Users\hbi1\Documents\javafullstack\sp_ws\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\101299355.index
+\dbtest\src\main\java
+C:\Users\hbi1\Documents\javafullstack\sp_ws\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3038947121.index
+\batisPrj\src\main\java
+C:\Users\hbi1\Documents\javafullstack\sp_ws\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1679987527.index
+\batisPrac\src\main\java
 C:\Users\hbi1\Documents\javafullstack\sp_ws\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2776612295.index
 \day2\src\main\java
 C:\Users\hbi1\Documents\javafullstack\sp_ws\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\38472399.index
@@ -23,6 +29,8 @@ C:\Users\hbi1\Documents\javafullstack\sp_ws\.metadata\.plugins\org.eclipse.jst.j
 \day5Test\src\main\java
 C:\Users\hbi1\Documents\javafullstack\sp_ws\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1937528655.index
 \day1\src\main\java
+C:\Users\hbi1\Documents\javafullstack\sp_ws\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\149691356.index
+\dbTest2\src\main\java
 C:\Users\hbi1\Documents\javafullstack\sp_ws\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1616145980.index
 \day2\src\main\java
 C:\Users\hbi1\Documents\javafullstack\sp_ws\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2305221031.index
