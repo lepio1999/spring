@@ -102,4 +102,29 @@
 		<item value="org.springsource.sts.package:3.9.17.202106211233-RELEASE-e420"/>
 		<item value="org.springsource.sts:3.9.17.202106211233-RELEASE"/>
 	</list>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\hbi1\Documents\javafullstack\sp_ws\ProjectTest2"/>
+			<item value="C:\Users\hbi1\Documents\javafullstack\sp_ws\testprj2"/>
+			<item value="C:\Users\hbi1\Documents\javafullstack\sp_ws\batisTran"/>
+			<item value="C:\Users\hbi1\Downloads\mvcp\MVC"/>
+			<item value="C:\Users\hbi1\Downloads\mvcp"/>
+			<item value="C:\Users\hbi1\Documents\javafullstack\sp_ws\mvcp"/>
+			<item value="C:\Users\hbi1\Desktop\새 폴더\SpringCarrotMarket-main\carrotMarket"/>
+			<item value="C:\Users\hbi1\Documents\javafullstack\sp_ws\ProjectTest"/>
+			<item value="C:\Users\hbi1\Documents\javafullstack\sp_ws\batisPrj"/>
+			<item value="C:\Users\hbi1\Documents\javafullstack\sp_ws\dbtest"/>
+			<item value="C:\Users\hbi1\Documents\javafullstack\sp_ws\dbtest3"/>
+		</list>
+	</section>
+	<section name="CleanDialogSettings">
+		<item key="TOGGLE_SELECTED" value="false"/>
+		<item key="DIALOG_WIDTH" value="500"/>
+		<item key="DIALOG_HEIGHT" value="389"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
 </section>
