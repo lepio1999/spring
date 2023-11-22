@@ -4,9 +4,11 @@
 <mapper namespace="com.sh.order.OrderMapper">
 
 	<insert id="insertOrder" parameterType="OrderDTO">
-		INSERT INTO order_tbl_test (
+		INSERT INTO
+		order_tbl (
 		order_code,
 		user_code,
+		user_id,
 		user_nickname,
 		phone_num,
 		board_id,
@@ -19,8 +21,9 @@
 		order_date
 		)
 		VALUES (
-		#{order_code},
+		seq_order_code.NEXTVAL,
 		#{user_code},
+		#{user_id},
 		#{user_nickname},
 		#{phone_num},
 		#{board_id},
@@ -30,8 +33,13 @@
 		#{member_addr},
 		#{detailed_address},
 		#{delivery_req},
-		#{order_date}
+		sysdate
 		)
 	</insert>
 
+<select id="selectAll" resultType="OrderDTO" parameterType="String">
+    SELECT *
+    FROM order_tbl
+    WHERE user_id = #{user_id}
+</select>
 </mapper>

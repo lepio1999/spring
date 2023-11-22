@@ -108,6 +108,9 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\hbi1\Documents\javafullstack\sp_ws\mysqlPrj"/>
+			<item value="C:\Users\hbi1\Documents\javafullstack\sp_ws\CornMarket"/>
+			<item value="C:\Users\hbi1\Documents\javafullstack\sp_ws\SecondHand"/>
 			<item value="C:\Users\hbi1\Documents\javafullstack\sp_ws\ProjectTest2"/>
 			<item value="C:\Users\hbi1\Documents\javafullstack\sp_ws\testprj2"/>
 			<item value="C:\Users\hbi1\Documents\javafullstack\sp_ws\batisTran"/>
