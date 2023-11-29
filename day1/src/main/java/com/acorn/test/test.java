@@ -1,3 +1,4 @@
+package com.acorn.test;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -12,6 +13,16 @@ import java.util.Scanner;
  * 5, 2, 8, 4번 왕자가 차례대로 제외되고 마지막까지 남게 된 7 번 왕자에게 공주를 구하러갑니다. N과 K가 주어질 때 공주를 구하러
  * 갈 왕자의 번호를 출력하는 프로그램을 작성하시오.
  */
+/*▣ 입력설명
+	첫 줄에 자연수 N(5<=N<=1,000)과 K(2<=K<=9)가 주어진다.
+	▣ 출력설명
+	첫 줄에 마지막 남은 왕자의 번호를 출력합니다.
+	▣ 입력예제 1 
+	8 3
+	▣ 출력예제 1
+	7
+ * 
+ * */
 
 /*
  * 왕자가 빠지는 순서)))) 만약 왕자가 8명이고 3을 외친 왕자가 제외된다면 
@@ -21,40 +32,38 @@ import java.util.Scanner;
 
 public class test {
 
-
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 
-        int N, K;
+		int N, K;
 
-        // 자연수 N과 K 입력 받기
-        System.out.print("N과 K를 입력하세요 (예: 5 2): ");
-        N = scanner.nextInt();
-        K = scanner.nextInt();
+		// 자연수 N과 K 입력 받기
+		System.out.print("왕좌의 숫자를 입력하세요");
+		N = scanner.nextInt();
+		System.out.print("왕이 외칠 숫자를 입력하세요");
+		K = scanner.nextInt();
 
-        if (N < 5 || N > 1000 || K < 2 || K > 9) {
-            System.out.println("N은 5 이상 1000 이하, K는 2 이상 9 이하의 자연수여야 합니다.");
-            return;
-        }
+		if (N < 5 || N > 1000 || K < 2 || K > 9) {
 
-        List<Integer> eliminated = new ArrayList<Integer>();
+			return;
+		}
 
-        // 왕자들을 리스트에 넣기
-        for (int i = 1; i <= N; i++) {
-            eliminated.add(i);
-        }
+		List<Integer> Prince = new ArrayList<Integer>();
 
-        int idx = 0;
+		for (int i = 1; i <= N; i++) {
+			Prince.add(i);
+		}
 
-        // 왕자들이 모두 제외될 때까지 반복
-        while (eliminated.size() > 1) {
-            idx = (idx + K - 1) % eliminated.size(); // 제외될 왕자의 인덱스 계산
-            eliminated.remove(idx); // 왕자 제외
-        }
+		int PrinceNum = 0;
 
-        // 마지막으로 남은 왕자 번호 출력
-        System.out.println("마지막으로 남는 왕자 번호: " + eliminated.get(0));
+		
+		while (Prince.size() > 1) {
+			PrinceNum = (PrinceNum + K - 1) % Prince.size(); 
 
-        scanner.close();
-    }
+			Prince.remove(PrinceNum); 
+		}
+
+		System.out.println("마지막으로 남는 왕자 번호: " + Prince.get(0));
+		
+	}
 }
