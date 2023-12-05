@@ -15,76 +15,76 @@
    <!-- 시간순 정렬 -->
    <select id="getListTime" resultType="ScrollDTO">
  <![CDATA[
-   SELECT * FROM (
-       SELECT 
-           @rownum := @rownum + 1 AS num,
-           sort,
-           board_id,
-           board_title,
-           board_date,
-           user_nickname,
-           loc_code,
-           detail_loc,
-           board_price,
-           board_click,
-           board_img,
-           user_code
-       FROM (
-           SELECT 
-               @rownum := 0 AS sort,
-               board_id,
-               board_title,
-               board_date,
-               user_nickname,
-               loc_code,
-               detail_loc,
-               board_price,
-               board_click,
-               board_img,
-               user_code
-           FROM user_board
-           ORDER BY board_date DESC
-       ) AS subquery
-   ) AS numbered_rows
-   WHERE num BETWEEN #{startIndex} AND #{endIndex}
+	SELECT * FROM (
+	    SELECT 
+	        @rownum := @rownum + 1 AS num,
+	        sort,
+	        board_id,
+	        board_title,
+	        board_date,
+	        user_nickname,
+	        loc_code,
+	        detail_loc,
+	        board_price,
+	        board_click,
+	        board_img,
+	        user_code
+	    FROM (
+	        SELECT 
+	            @rownum := 0 AS sort,
+	            board_id,
+	            board_title,
+	            board_date,
+	            user_nickname,
+	            loc_code,
+	            detail_loc,
+	            board_price,
+	            board_click,
+	            board_img,
+	            user_code
+	        FROM user_board
+	        ORDER BY board_date DESC
+	    ) AS subquery
+	) AS numbered_rows
+	WHERE num BETWEEN #{startIndex} AND #{endIndex}
     ]]>
    </select>
 
   <!-- 인기순(조회수) 정렬 -->
    <select id="getListClick" resultType="ScrollDTO">
 <![CDATA[
-   SELECT * FROM (
-       SELECT 
-           @rownum := @rownum + 1 AS num,
-           sort,
-           board_id,
-           board_title,
-           board_date,
-           user_nickname,
-           loc_code,
-           detail_loc,
-           board_price,
-           board_click,
-           board_img,
-           user_code
-       FROM (
-           SELECT 
-               @rownum := 0 AS sort,
-               board_id,
-               board_title,
-               board_date,
-               user_nickname,
-               loc_code,
-               detail_loc,
-               board_price,
-               board_click,
-               board_img,
-               user_code
-           FROM user_board
-           ORDER BY board_click DESC
-       ) AS subquery
-   ) AS numbered_rows
-   WHERE num BETWEEN #{startIndex} AND #{endIndex}
+	SELECT * FROM (
+	    SELECT 
+	        @rownum := @rownum + 1 AS num,
+	        sort,
+	        board_id,
+	        board_title,
+	        board_date,
+	        user_nickname,
+	        loc_code,
+	        detail_loc,
+	        board_price,
+	        board_click,
+	        board_img,
+	        user_code
+	    FROM (
+	        SELECT 
+	            @rownum := 0 AS sort,
+	            board_id,
+	            board_title,
+	            board_date,
+	            user_nickname,
+	            loc_code,
+	            detail_loc,
+	            board_price,
+	            board_click,
+	            board_img,
+	            user_code
+	        FROM user_board
+	        ORDER BY board_click DESC
+	    ) AS subquery
+	) AS numbered_rows
+	WHERE num BETWEEN #{startIndex} AND #{endIndex}
     ]]>
    </select>
    
@@ -132,39 +132,39 @@
    <!-- 동네(시간순 정렬) -->
    <select id="localListTime" resultType="ScrollDTO">
     <![CDATA[
-   SELECT * FROM (
-       SELECT 
-           @rownum := @rownum + 1 AS num,
-           sort,
-           board_id,
-           board_title,
-           board_date,
-           user_nickname,
-           loc_code,
-           detail_loc,
-           board_price,
-           board_click,
-           board_img,
-           user_code
-       FROM (
-           SELECT 
-               @rownum := 0 AS sort,
-               board_id,
-               board_title,
-               board_date,
-               user_nickname,
-               loc_code,
-               detail_loc,
-               board_price,
-               board_click,
-               board_img,
-               user_code
-           FROM user_board
-           WHERE detail_loc = #{detail_loc}
-           ORDER BY board_date DESC
-       ) AS subquery
-   ) AS numbered_rows
-   WHERE num BETWEEN #{startIndex} AND #{endIndex}
+	SELECT * FROM (
+	    SELECT 
+	        @rownum := @rownum + 1 AS num,
+	        sort,
+	        board_id,
+	        board_title,
+	        board_date,
+	        user_nickname,
+	        loc_code,
+	        detail_loc,
+	        board_price,
+	        board_click,
+	        board_img,
+	        user_code
+	    FROM (
+	        SELECT 
+	            @rownum := 0 AS sort,
+	            board_id,
+	            board_title,
+	            board_date,
+	            user_nickname,
+	            loc_code,
+	            detail_loc,
+	            board_price,
+	            board_click,
+	            board_img,
+	            user_code
+	        FROM user_board
+	        WHERE detail_loc = #{detail_loc}
+	        ORDER BY board_date DESC
+	    ) AS subquery
+	) AS numbered_rows
+	WHERE num BETWEEN #{startIndex} AND #{endIndex}
     ]]>
    </select>
 
@@ -172,39 +172,39 @@
     <!-- 동네(인기순 정렬) -->
    <select id="localListClick" resultType="ScrollDTO">
     <![CDATA[
-   SELECT * FROM (
-       SELECT 
-           @rownum := @rownum + 1 AS num,
-           sort,
-           board_id,
-           board_title,
-           board_date,
-           user_nickname,
-           loc_code,
-           detail_loc,
-           board_price,
-           board_click,
-           board_img,
-           user_code
-       FROM (
-           SELECT 
-               @rownum := 0 AS sort,
-               board_id,
-               board_title,
-               board_date,
-               user_nickname,
-               loc_code,
-               detail_loc,
-               board_price,
-               board_click,
-               board_img,
-               user_code
-           FROM user_board
-           WHERE detail_loc = #{detail_loc}
-           ORDER BY board_click DESC
-       ) AS subquery
-   ) AS numbered_rows
-   WHERE num BETWEEN #{startIndex} AND #{endIndex}
+	SELECT * FROM (
+	    SELECT 
+	        @rownum := @rownum + 1 AS num,
+	        sort,
+	        board_id,
+	        board_title,
+	        board_date,
+	        user_nickname,
+	        loc_code,
+	        detail_loc,
+	        board_price,
+	        board_click,
+	        board_img,
+	        user_code
+	    FROM (
+	        SELECT 
+	            @rownum := 0 AS sort,
+	            board_id,
+	            board_title,
+	            board_date,
+	            user_nickname,
+	            loc_code,
+	            detail_loc,
+	            board_price,
+	            board_click,
+	            board_img,
+	            user_code
+	        FROM user_board
+	        WHERE detail_loc = #{detail_loc}
+	        ORDER BY board_click DESC
+	    ) AS subquery
+	) AS numbered_rows
+	WHERE num BETWEEN #{startIndex} AND #{endIndex}
     ]]>
    </select>
 

@@ -415,16 +415,19 @@ textarea {
             <%
             }
             %>
-            <li><img
-               src="${path}}/images/<%=firstSelectedUser.getUser_image()%>"
-               style="border-radius: 50%; width: 100px; height: 100px;">
+            <li><img src="${selectedUser.user_image}" style="border-radius: 50%; width: 100px; height: 100px;">
                <h2>
                   <%
                   if (user != null && selectedUser != null) {
                   %>
-                  Welcome,
-                  <%=firstSelectedUser.getUser_nickname()%>님
-               </h2></li>
+               <form action="${path}/myPage" method="post">
+					<input type="hidden" name="user_code" value="${selectedUser.user_code}">
+					<button type="submit">
+					Welcome, ${selectedUser.user_nickname}님
+					</button>
+				</form>
+               </h2>
+            </li>
             <li>
                <form action="${path}/myPage" method="post">
                   <input type="hidden" name="user_code"
@@ -536,6 +539,7 @@ textarea {
                style="margin-right: 102px;"> <br> <label id="detail">카테고리:</label>
 
             <script>
+               // 상품 게시 카테고리 구분 (  나눔 OR 판매  )
                function checkboardCate() {
 
                   var boardCate = document.getElementById("board_cate");
@@ -577,6 +581,7 @@ textarea {
          <span id="charCount">0 / 100</span>
 
          <script>
+            // board_text의 길이제한 두는 함수 
             function checkLength() {
                var maxLength = 100;
                var textArea = document.getElementById("board_Text");
