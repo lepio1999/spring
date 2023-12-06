@@ -177,23 +177,7 @@ button:hover {
 	background-color: #d55500;
 }
 
-footer {
-	background-color: #333;
-	padding: 10px;
-	color: white;
-	text-align: center;
-	bottom: 0;
-}
 
-footer a {
-	text-decoration: none; /* 텍스트 데코레이션 제거 */
-	color: inherit; /* 링크의 색상을 부모 요소로부터 상속 */
-}
-
-footer a:hover {
-	text-decoration: none; /* 호버 시 텍스트 데코레이션 제거 유지 */
-	color: inherit; /* 호버 시 색상을 부모 요소로부터 상속 */
-}
 
 textarea {
 	resize: none;
@@ -203,11 +187,11 @@ textarea {
 .update {
 	min-height: 700px;
 	margin: 0 auto;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 115px;
 	border-radius: 26px;
 	width: 1008px;
 }
+
 
 .update input[type=button], input[type=submit] {
 	background-color: #ff6f0f;
@@ -369,7 +353,7 @@ textarea {
 				}
 				%>
 				<li><img
-					src="${path}/images/<%=firstSelectedUser.getUser_image()%>"
+					src="<%=firstSelectedUser.getUser_image()%>"
 					style="border-radius: 50%; width: 100px; height: 100px;">
 					<h2>
 						<%

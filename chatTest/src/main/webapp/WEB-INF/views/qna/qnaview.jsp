@@ -200,6 +200,7 @@ footer a:hover {
 textarea {
     resize: none;
 }
+
 	
 </style>
 <style>
@@ -245,7 +246,7 @@ textarea {
     	color:#0000006b;
     	position:absolute;
     	left: 24px;
-    	bottom: 13px;
+    	bottom: 2px;
     }
     .contents{
     	
@@ -462,7 +463,7 @@ function listview(id){ // 댓글리스트 불러오기
 							'<div id = "cometupbox" class = "cometupbox" style="display: none">'+
 							'<textarea  id="cometup_text" class="cometup_text"  placeholder="수정할 댓글을 입력하세요. 150자이내" required></textarea>'+
 							'<div class="cometupregbtn"> <input type="button" id="cometupregbtn"  value="수정하기"  onclick="upregbtn(this)"> </div> </div> </div>');
-		}else if(id != list.q_id){
+		}else if(id != list.q_id){  // session에 저장된 id 값이 댓글에 저장된 id와 다른 경우 수정,삭제 버튼 X
 			$('#commentlistbox').append(' <div id = "cometbox" class="cometbox">'+
 					' <div id= "cometwriter" class = "cometwriter">'+ list.q_writer + '</div>' +
 					'<div id= "comment" class="comment">'+ list.q_comment + '</div>' +
@@ -481,8 +482,8 @@ function reg(){ // 댓글 등록
 	let writer = '${writer}';
 	let id = '${id}';
 	let comment = $('#q_comment').val();
-	if(comment != ""){
-		if(id == 'admin'){
+	if(comment != ""){ // 댓글내용이 없을때
+		if(id == 'admin'){ // 로그인 아이디가 관리자 아이디일 경우 닉네임을 무조건 관리자로
 			writer = '관리자';
 		}
 		let data = {
@@ -538,10 +539,10 @@ function upregbtn(c){ // 댓글 수정
 	let code = cometbox.find('#cometup_key').val();
 	let comment = cometbox.find('#cometup_text').val();
 	
-	if(comment == ""){
+	if(comment == ""){ // 댓글내용이 없을때
 		alert("수정할 댓글을 입력하세요");
 		event.stopPropagation();
-	}else{
+	}else{ // 댓글내용이 있을때
 	let data ={
 			q_code_co : code,
 			q_comment : comment
@@ -619,7 +620,7 @@ function cometdel(c){ // 댓글 삭제
          }
          %>
             <li><img
-               src="${path}/images/<%=firstSelectedUser.getUser_image()%>"
+               src="<%=firstSelectedUser.getUser_image()%>"
                style="border-radius: 50%; width: 100px; height: 100px;">
                <h2>
                   <%
@@ -692,7 +693,7 @@ function cometdel(c){ // 댓글 삭제
             <input type="hidden" name="newLocation" value="${detail_loc}" />
             <button type="submit">동네거래</button>
          </form>
-      </div>
+      </div>      
       <%
       if (user != null && selectedUser != null) {
       %>
@@ -713,18 +714,20 @@ function cometdel(c){ // 댓글 삭제
 
 
    </header>
+   
 
         <div class="qnaview">
 	        <div class ="qna">
 	           <div class="title">
 	               <span>${userImp.q_title }</span>
-	               <span class="qna-datetime">${userImp.q_date} ${userImp.q_time}</span>
-	           </div>
+	               <span class="qna-datetime">작성자: ${userImp.q_writer} | ${userImp.q_date} ${userImp.q_time}</span>
+	           </div>	           
 	           <div class="contents">
-	               <span>${userImp.q_contents }
+	               <span>${userImp.q_contents}
 	               </span>
 	           </div>
 	        </div>
+	        
 	        
 	        <div class="submit">
 	            <form action="${path}/qna" method="get">
