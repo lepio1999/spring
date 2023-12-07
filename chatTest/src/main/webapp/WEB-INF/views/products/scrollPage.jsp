@@ -685,11 +685,11 @@ header.menu-open h2 {
                 <div class="card_address"><%="${item.loc_code}"%>/<%="${item.detail_loc}"%></div>
                 <div class="card_count">
                  조회 <%="${item.board_click}"%>
-                   <button id = '<%="${item.board_id}"%>' class="card_like" onclick = "likeEvent('<%="${item.board_id}"%>')"></button>
+                   <button id = '<%="${item.board_id}"%>' class="card_like" onclick = "likeEvent('<%="${item.board_id}"%>','<%="${item.user_code}"%>')"></button>
                   </div>
                 </article>
                `;
-               //item.board_date 안들어감
+               //item.board_date 안들어감               
                
       });
           
@@ -718,13 +718,14 @@ header.menu-open h2 {
     
     //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 관심상품 기능
     //좋아요 Insert
-   function likeEvent(boardId) {
+   function likeEvent(boardId,user_code) {
            $.ajax({
                url: "${path}/products/like",
                type: "POST",
                data: {
                    userId: userId,
-                   boardId: boardId
+                   boardId: boardId,
+                   user_code: user_code
                },
                success: function(data) {
                  if(data.onClick == false){

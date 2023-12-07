@@ -187,6 +187,7 @@ textarea {
    align-items: center;
    justify-content: center;
    text-align: center;
+   background-color: #fffae0;
 }
 
 .main-title {
@@ -219,7 +220,7 @@ thead {
 }
 
 tbody {
-   background-color: #fffcebd4;
+   background-color: white;
 }
 
 .qna-tb thead tr, tbody tr {
@@ -267,7 +268,7 @@ border-left: 1px solid #0000006b;
    font-size: 17px;
    margin: 0;
    height: 68px;
-   background-color: #fffcebd4;
+   background-color: white;
    width: 100%;
    padding-left: 30px;
    text-align: left;
@@ -530,6 +531,21 @@ function logincheck(){
                                  <input type="hidden" value="${list.q_code}" name="code" /> <input
                                     type="submit" value="${list.q_title}" id="title"
                                     class="title-btn" onclick="return logincheck()" /> <span
+                                    class="secret">비밀</span>
+                              </form>
+                           </td>
+                           <td class="date"><span></span>${list.q_writer}</td>
+                           <td class="date"><span></span>${list.q_date}</td>
+                        </tr>
+                     </c:when>
+                     <c:when
+                        test="${list.q_check eq 'f' && userid eq list.q_id}">
+                        <tr>
+                           <td class="title">
+                              <form action="${path}/qna" method="POST">
+                                 <input type="hidden" value="${list.q_code}" name="code" /> <input
+                                    type="submit" value="${list.q_title}" id="title"
+                                    class="title-btn" onclick="return logincheck()" /><span
                                     class="secret">비밀</span>
                               </form>
                            </td>

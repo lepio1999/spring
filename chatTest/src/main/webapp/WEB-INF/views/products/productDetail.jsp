@@ -448,19 +448,21 @@ footer a:hover {
 </head>
 <body>
 
+
    <script>
    let loading = false; // 추가 데이터 로딩 중 여부
    let onClick = ${onClick};
    console.log("jsp확인 = " + onClick);
    //좋아요
-   function like(boardId, userId) {
+   function like(boardId, userId, user_code) {
        if (!loading) {
            loading = true;
            $.ajax({
                url: "${path}/products/like", // 서버측 엔드포인트 설정
                type: "POST",              
                data: {boardId:boardId,
-                     userId:userId
+                     userId:userId,
+                     user_code:user_code                     
                   },
                success: function (data) {
                    $("#likes").empty();
@@ -493,7 +495,7 @@ footer a:hover {
       liketoggle();
        $("#like").click(function(){
           console.log("토글 " + onClick);
-          like(${product.board_Id},"${user.user_id}");
+          like(${product.board_Id},"${user.user_id}",${product.user_code});          
           onClick = !onClick;
        });
        
@@ -842,7 +844,8 @@ footer a:hover {
                            <input type="hidden" name="sell_nickname" value="${product.user_nickname}" required><br>
                            <input type="hidden" name="buy_nickname" value="${selectedUser.user_nickname}" required><br>
                            <input type="hidden" name="board_Price" value="${product.board_Price}" required><br>
-                            <input type="hidden" name="board_Img" value="${product.board_Img}" required><br>                                                      
+                            <input type="hidden" name="board_Img" value="${product.board_Img}" required><br>
+                           
                         <button type="submit">채팅신청하기</button>
 
                      </form>
@@ -875,10 +878,10 @@ footer a:hover {
                            type="hidden" name="board_id" value="${product.board_Id}"
                            required><br>
                        <input type="hidden" name="board_Title" value="${product.board_Title}" required><br> 
-                           <input type="hidden" name="sell_nickname" value="${product.user_nickname}" required><br>
+ 							<input type="hidden" name="sell_nickname" value="${product.user_nickname}" required><br>
                            <input type="hidden" name="buy_nickname" value="${selectedUser.user_nickname}" required><br>                           <input type="hidden" name="board_Price" value="${product.board_Price}" required><br>
                             <input type="hidden" name="board_Img" value="${product.board_Img}" required><br>
-                                                       
+                           
                         <button type="submit">채팅신청하기</button>
 
                      </form>

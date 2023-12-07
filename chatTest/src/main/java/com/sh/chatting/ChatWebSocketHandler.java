@@ -16,7 +16,7 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
 
 	@Override
 	public void afterConnectionEstablished(WebSocketSession session) throws Exception {
-		// WebSocket 연결이 성공적으로 열린 경우 호출
+		// WebSocket 연결이 성공적으로 열린 경우 호출됩니다.
 		log(session.getId() + "연결됨");
 
 		// 연결된 세션을 users 맵에 추가
@@ -25,7 +25,7 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
 
 	@Override
 	public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
-		// WebSocket 연결이 닫힌 경우 호출
+		// WebSocket 연결이 닫힌 경우 호출됩니다.
 		log(session.getId() + "연결 종료됨");
 
 		// 연결이 닫힌 세션을 users 맵에서 제거
@@ -50,7 +50,7 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
 
 	@Override
 	public void handleTransportError(WebSocketSession session, Throwable exception) throws Exception {
-		// WebSocket 전송 오류가 발생한 경우 호출
+		// WebSocket 전송 오류가 발생한 경우 호출됩니다.
 		log(session.getId() + " 익셉션 발생: " + exception.getMessage());
 	}
 

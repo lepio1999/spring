@@ -106,11 +106,11 @@ window.onload = function() {
         // '입장' 버튼을 누르지 않았을 때 안내 메시지 출력
         // '입장' 버튼을 눌렀는지 안눌렀는지 확인
         if ($('#connectBtn').is(':visible')) {
-            var entryMessage = "  ------------------------------------- 입장버튼을 누르고 채팅을 시작하세요 --------------------------------------"; // 안내 메시지           					    
+            var entryMessage = "  ------------------------------------- 입장버튼을 누르고 채팅을 시작하세요 --------------------------------------"; // 안내 메시지                              
             appendEntryMessage(entryMessage); // 채팅창에 안내 메시지 추가            
             return; // 메시지 전송을 중단
         }
-		
+      
         
         
         if (msg) {
@@ -178,9 +178,9 @@ function appendEntryMessage(entryMessage) {
 
     // 대화창 스크롤을 아래로 이동
     // 'chatArea'의 스크롤 위치를 설정하여 현재 스크롤 위치를 대화창의 최하단으로 이동합니다.
-	// 'scrollTop'은 엘리먼트의 위쪽 끝에서 스크롤된 거리를 나타내며,
-	// 'scrollHeight'는 엘리먼트의 전체 높이를 나타냅니다.
-	// 대화창이 스크롤 가능한 경우, 'scrollTop'을 'scrollHeight'로 설정함으로써 최하단으로 스크롤이 이동됩니다.
+   // 'scrollTop'은 엘리먼트의 위쪽 끝에서 스크롤된 거리를 나타내며,
+   // 'scrollHeight'는 엘리먼트의 전체 높이를 나타냅니다.
+   // 대화창이 스크롤 가능한 경우, 'scrollTop'을 'scrollHeight'로 설정함으로써 최하단으로 스크롤이 이동됩니다.
 function scrollTop() {
     var chatArea = document.getElementById('chatArea');
     chatArea.scrollTop = chatArea.scrollHeight;
