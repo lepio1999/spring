@@ -76,7 +76,14 @@ public class ProductService implements ProductServiceI {
       // 유저아이디에 따른 게시글 삭제
       productRepository.deleteProduct4(user_id);
    }
-
+   
+   @Override
+   public void deleteProduct6(String user_code) {
+      // 유저코드에 따른 유저 좋아요 삭제
+      productRepository.deleteProduct6(user_code);
+   }
+   
+   
    @Override
    public int updateProduct(ProductDTO product) {
       // 상품정보 수정

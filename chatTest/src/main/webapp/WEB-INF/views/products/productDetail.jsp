@@ -604,12 +604,12 @@ footer a:hover {
                   <%
                   if (user != null && selectedUser != null) {
                   %>
-                  	<form action="${path}/myPage" method="post">
-						<input type="hidden" name="user_code" value="${selectedUser.user_code}">
-						<button type="submit">
-						Welcome, ${selectedUser.user_nickname}님
-						</button>
-					</form>
+                     <form action="${path}/myPage" method="post">
+                  <input type="hidden" name="user_code" value="${selectedUser.user_code}">
+                  <button type="submit">
+                  Welcome, ${selectedUser.user_nickname}님
+                  </button>
+               </form>
                </h2>
             </li>
             <li>
@@ -878,7 +878,7 @@ footer a:hover {
                            type="hidden" name="board_id" value="${product.board_Id}"
                            required><br>
                        <input type="hidden" name="board_Title" value="${product.board_Title}" required><br> 
- 							<input type="hidden" name="sell_nickname" value="${product.user_nickname}" required><br>
+                      <input type="hidden" name="sell_nickname" value="${product.user_nickname}" required><br>
                            <input type="hidden" name="buy_nickname" value="${selectedUser.user_nickname}" required><br>                           <input type="hidden" name="board_Price" value="${product.board_Price}" required><br>
                             <input type="hidden" name="board_Img" value="${product.board_Img}" required><br>
                            

@@ -30,6 +30,7 @@ public interface ProductServiceI {
     void deleteProduct2(String boardId);
     void deleteProduct3(String user_code);
     void deleteProduct4(String user_id);
+    void deleteProduct6(String user_code);
 
     //상품 수정
     int updateProduct(ProductDTO product);

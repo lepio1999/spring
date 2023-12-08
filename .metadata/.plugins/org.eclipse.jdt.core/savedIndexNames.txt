@@ -22,7 +22,6 @@ INDEX VERSION 1.131+C:\Users\hbi1\Documents\javafullstack\sp_ws\.metadata\.plugi
 3800519311.index
 1122755408.index
 122326226.index
-1688650337.index
 2977730226.index
 2987779727.index
 2656150864.index
@@ -67,7 +66,6 @@ INDEX VERSION 1.131+C:\Users\hbi1\Documents\javafullstack\sp_ws\.metadata\.plugi
 1721177593.index
 3800979576.index
 1773393425.index
-44144584.index
 1647183216.index
 1724424650.index
 2750094089.index

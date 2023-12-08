@@ -73,6 +73,12 @@ public class ProductRepository {
       // 유저 아이디에 따른 상품 삭제
       session.delete(namespace + "deleteProduct4", user_id);
    }
+   
+   public void deleteProduct6(String user_code) {
+	      // 유저 아이디에 따른 상품 삭제
+	      session.delete(namespace + "deleteProduct6", user_code);
+	   }
+   
 
    public int updateProduct(ProductDTO product) {
       // 상품 정보 갱신

@@ -134,6 +134,13 @@
 
 
    </delete>
+   
+   <!-- 좋아요 삭제 추가 상대방이 누른 부분 삭제 -->
+   <delete id ="deleteProduct6" parameterType="String">
+         DELETE FROM board_like
+      WHERE user_code = #{user_code}
+   
+   </delete>
 
 
 
